@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Binara Dilshan Hettiarachchi - UI,UX Developer & IT Student at SLIIT. Explore my projects and skills.">
+    <meta name="keywords" content="portfolio, web developer, SLIIT, IT student, UI,UX developer">
+    <meta name="author" content="Binara Dilshan Hettiarachchi">
+    <title>Binara Dilshan | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>BD<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Available for opportunities
+            </div>
+
+            <h1 class="hero-title">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-name" id="animatedName">Binara Dilshan</span>
+                <span class="title-surname">Hettiarachchi</span>
+            </h1>
+
+            <div class="hero-role">
+                <span class="role-prefix">I'm a</span>
+                <span class="role-text" id="typeWriter"></span>
+                <span class="cursor-blink">|</span>
+            </div>
+
+            <p class="hero-description">
+                Aspiring Full Stack Developer & IT undergraduate at
+                <span class="highlight">SLIIT</span>, passionate about building innovative digital experiences with modern technologies.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Get In Touch</span>
+                    <i data-lucide="send"></i>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Years Learning</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-title">developer.js</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Binara Dilshan"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"UI UX developer"</span>,
+  <span class="code-property">university</span>: <span class="code-string">"SLIIT"</span>,
+  <span class="code-property">passion</span>: <span class="code-string">"Building things"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"React"</span>,
+    <span class="code-string">"C programing"</span>,
+    <span class="code-string">"java"</span>
+  ],
+  <span class="code-method">code</span>: () => {
+    <span class="code-keyword">return</span> <span class="code-string">"Creating amazing things!"</span>;
+  }
+};</code></pre>
+                </div>
+            </div>
+
+            <div class="floating-icons">
+                <div class="float-icon icon-1"><i data-lucide="code-2"></i></div>
+                <div class="float-icon icon-2"><i data-lucide="database"></i></div>
+                <div class="float-icon icon-3"><i data-lucide="globe"></i></div>
+                <div class="float-icon icon-4"><i data-lucide="cpu"></i></div>
+                <div class="float-icon icon-5"><i data-lucide="terminal"></i></div>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i data-lucide="chevrons-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Get to know who I am and what drives me</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-glow"></div>
+                        <img src="C:\Users\BINARA\Downloads\WhatsApp Image 2026-02-18 at 4.41.52 PM.jpeg" alt="Binara Dilshan" class="profile-img">
+                        <div class="image-border"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="exp-number">2+</span>
+                        <span class="exp-text">Years of<br>Learning</span>
+                    </div>
+                </div>
+
+                <div class="about-info">
+                    <h3 class="about-heading">
+                        Passionate Developer &<br>
+                        <span class="gradient-text">IT Enthusiast</span>
+                    </h3>
+
+                    <p class="about-text">
+                        I'm <strong>Binara Dilshan Hettiarachchi</strong>, an undergraduate pursuing
+                        <strong>BSc (Hons) in Information Technology</strong> at the
+                        <strong>Sri Lanka Institute of Information Technology (SLIIT)</strong>.
+                    </p>
+
+                    <p class="about-text">
+                        My journey in tech began with a curiosity about how software shapes our world. Today, I channel that curiosity into building modern web applications, exploring cutting-edge technologies, and continuously expanding my skill set.
+                    </p>
+
+                    <p class="about-text">
+                        When I'm not coding, you'll find me exploring new frameworks, contributing to open-source projects, or diving deep into the latest tech trends. I believe in writing clean, efficient code that makes a difference.
+                    </p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i data-lucide="graduation-cap"></i>
+                            <div>
+                                <span class="detail-label">Education</span>
+                                <span class="detail-value">BSc (Hons) IT - SLIIT</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <span class="detail-label">Location</span>
+                                <span class="detail-value">Sri Lanka</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value">binaradilshanhettiarachchi@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i data-lucide="briefcase"></i>
+                            <div>
+                                <span class="detail-label">Status</span>
+                                <span class="detail-value">Open to Internships</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Connect</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <span class="section-tag section-tag-end">&lt;/about&gt;</span>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="code"></i> Frontend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                            </div>
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="server"></i> Backend
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                            </div>
+                            <span class="skill-name">C</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            </div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
+                            </div>
+                            <span class="skill-name">Express.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="database"></i> Database
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+                            </div>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            </div>
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase">
+                            </div>
+                            <span class="skill-name">Firebase</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i data-lucide="wrench"></i> Tools
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                            </div>
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                            </div>
+                            <span class="skill-name">VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                            </div>
+                            <span class="skill-name">Intellij IDEA</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <span class="section-tag section-tag-end">&lt;/skills&gt;</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Some of my recent work and personal projects</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="E-Commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with user authentication, product management, shopping cart, and payment integration.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop" alt="Mobile App UI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Expo</span>
+                        </div>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A cross-platform mobile application for task management with real-time sync, notifications, and team collaboration features.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop" alt="AI Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                        <h3 class="project-title">AI Image Classifier</h3>
+                        <p class="project-description">
+                            A machine learning application that classifies images using deep learning with a clean web interface for easy interaction.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            A comprehensive analytics dashboard with real-time data visualization, custom reports, and interactive charts.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" alt="API Project">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Express.js</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <h3 class="project-title">RESTful API Service</h3>
+                        <p class="project-description">
+                            A scalable REST API with authentication, rate limiting, documentation, and comprehensive error handling.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=800&h=500&fit=crop" alt="Social Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub">
+                                    <i data-lucide="github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i data-lucide="external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">Redis</span>
+                        </div>
+                        <h3 class="project-title">Social Media Clone</h3>
+                        <p class="project-description">
+                            A feature-rich social platform with real-time messaging, stories, posts, and an algorithmic feed system.
+                        </p>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-btn">
+                            <span>See More</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-cta">
+                <a href="https://github.com/Binara2003" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i data-lucide="github"></i>
+                    <span>View All on GitHub</span>
+                </a>
+            </div>
+
+            <span class="section-tag section-tag-end">&lt;/projects&gt;</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Let's discuss your project or just say hello</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's Build Something Amazing Together</h3>
+                    <p class="contact-text">
+                        I'm currently looking for internship opportunities and exciting projects. Whether you have a question, project idea, or just want to connect, feel free to reach out!
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:binara@example.com" class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">binaradilshanhettiarachchi@gmail</span>
+                            </div>
+                        </a>
+
+                        <a href="tel:+94771234567" class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Phone</span>
+                                <span class="method-value">+94 71 717 8123</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Location</span>
+                                <span class="method-value">Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" placeholder="Your message here..." rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+
+            <span class="section-tag section-tag-end">&lt;/contact&gt;</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>BD<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p class="footer-text">Crafting digital experiences with passion and precision.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://github.com/Binara2003" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/binara-hettiarachchi-8ab144374/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i data-lucide="twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Binara Dilshan Hettiarachchi. All rights reserved.</p>
+                <p>Built with <span class="heart">❤</span> and lots of coffee</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
